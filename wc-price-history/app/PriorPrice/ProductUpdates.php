@@ -2,6 +2,9 @@
 
 namespace PriorPrice;
 
+use WC_Product;
+use WC_Product_Variable;
+
 class ProductUpdates {
 
 	/**
@@ -36,6 +39,8 @@ class ProductUpdates {
 	 */
 	public function update_price_history( int $product_id ): void {
 
+		remove_action( 'woocommerce_update_product', [ $this, 'update_price_history' ] );
+
 		if ( get_post_status( $product_id ) === 'draft' ) {
 			return;
 		}
@@ -46,7 +51,13 @@ class ProductUpdates {
 			return;
 		}
 
-		$this->history_storage->add_price( $product_id, (float) $product->get_price(), true );
+		$this->history_storage->add_price( $product_id, (float) $product->get_price(), false );
+
+		if ( $product->is_type( 'variable' ) ) {
+			/** @var WC_Product_Variable $product */
+			$this->maybe_update_price_history_for_variation( $product );
+		}
+
 	}
 
 	/**
@@ -73,5 +84,21 @@ class ProductUpdates {
 		}
 
 		$this->history_storage->add_first_price( $product_id, (float) $product->get_price() );
+	}
+
+	/**
+	 * Update price history for variations.
+	 *
+	 * @since 2.1.3
+	 *
+	 * @param WC_Product_Variable $product Product.
+	 */
+	private function maybe_update_price_history_for_variation( WC_Product_Variable $product ): void {
+
+		$variations = $product->get_available_variations( 'objects' );
+		foreach ( $variations as $variation ) {
+			/** @var WC_Product $variation */
+			$this->history_storage->add_price( $variation->get_id(), (float) $variation->get_price(), false );
+		}
 	}
 }

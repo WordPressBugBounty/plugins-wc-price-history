@@ -3,18 +3,19 @@
 Plugin Name: WC Price History
 Short Description: Show the lowest product price in the last 30 days. Configurable, works with Omnibus European Union directive by default.
 Contributors: kkarpieszuk
-Tags: omnibus, WooCommerce, prices, history, 30days, lowest
+Tags: omnibus, WooCommerce, prices, history, lowest
 Requires at least: 5.8
 Tested up to: 6.6.1
 Requires PHP: 7.2
-Stable tag: 2.1.2
+Stable tag: 2.1.3
 License: MIT License
 License URI: https://mit-license.org/
 Donate link: https://buycoffee.to/wpzlecenia
+What's the lowest price in the last 30 days? Build customer trust through transparency! Track and display product price history in WooCommerce store
 
 == Description ==
 
-Track WooCommerce© Products prior prices history and display the lowest price in the last 30 days. This plugin allows your WC shop to be compliant with European Commission Directive 98/6/EC Article 6a which specifies price reduction announcement policy.
+Track WooCommerce© Products prior prices history and display the lowest price in the last 30 days. This plugin allows your WC shop to be compliant with European law which specifies price reduction announcement policy.
 
 == Installation ==
 
@@ -47,7 +48,9 @@ At the configuration screen you will find additional information how to configur
 
 == Frequently Asked Questions ==
 
-= How to configure plugin to be compliant with Omnibus directive =
+= What is Omnibus directive and how to configure this plugin to be compliant with? =
+
+European Commission Directive 98/6/EC Article 6a - in short Omnibus directive - specifies price reduction announcement policy.
 
 You don't have to do anything special, the default settings are compliant with Omnibus directive!
 
@@ -63,6 +66,14 @@ However, in case you misconfigured the plugin, here are steps to take to make it
 = Is plugin working well with variable products? =
 
 Yes, the plugin is compatible with product taxes and variable products (it tracks minimal price for each variation individually).
+
+= Is product working well with discount addons? =
+
+That depends on the addon. Some addons may not work with the plugin, some may work. For time being we recommend using the plugin with the following addon:
+
+https://wordpress.org/plugins/woo-discount-rules/
+
+This one was confirmed to work well with the plugin. If you know of other addons which work with the plugin, please let me know on the forum! I will add it to the list.
 
 = Is there any shortcode I could use to display minimal price? =
 
@@ -118,8 +129,15 @@ Please submit the [GitHub issue](https://github.com/kkarpieszuk/wc-price-history
 
 == Changelog ==
 
-2.1.2
+= {VERSION} =
+* Maintenance: Added PHPStan rule to check if classes with register_hooks() method is instantiated only in PriorPrice\Hooks::plugins_loaded() method. (#116)
+
+= 2.1.3 =
 * Fixed: Plugin was not available on mutlisite installations. (#100)
+* Fixed: Saved variable products sometimes had lowest price set to zero. (#111)
+* New: Added debug feature to export product with price history to JSON file and import it back. (#109)
+* Maintenance: Added build script to automate plugin release process. (#103)
+* Maintenance: Fixed unit tests. (#113)
 
 = 2.1.1 =
 * Fixed: Reverted change #89 from 2.1
