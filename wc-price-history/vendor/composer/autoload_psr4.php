@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'PriorPrice\\' => array($baseDir . '/app/PriorPrice'),
+    'PhpStanCustomRules\\' => array($baseDir . '/phpstan-custom-rules'),
 );

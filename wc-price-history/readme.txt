@@ -5,9 +5,9 @@ Short Description: Show the lowest product price in the last 30 days. Configurab
 Contributors: kkarpieszuk
 Tags: omnibus, WooCommerce, prices, history, lowest
 Requires at least: 5.8
-Tested up to: 6.6.1
+Tested up to: 6.7.1
 Requires PHP: 7.2
-Stable tag: 2.1.3
+Stable tag: 2.1.4
 License: MIT License
 License URI: https://mit-license.org/
 Donate link: https://buycoffee.to/wpzlecenia
@@ -67,7 +67,7 @@ However, in case you misconfigured the plugin, here are steps to take to make it
 
 Yes, the plugin is compatible with product taxes and variable products (it tracks minimal price for each variation individually).
 
-= Is product working well with discount addons? =
+= Is plugin working well with discount addons? =
 
 That depends on the addon. Some addons may not work with the plugin, some may work. For time being we recommend using the plugin with the following addon:
 
@@ -129,7 +129,7 @@ Please submit the [GitHub issue](https://github.com/kkarpieszuk/wc-price-history
 
 == Changelog ==
 
-= {VERSION} =
+= 2.1.4 =
 * Maintenance: Added PHPStan rule to check if classes with register_hooks() method is instantiated only in PriorPrice\Hooks::plugins_loaded() method. (#116)
 
 = 2.1.3 =

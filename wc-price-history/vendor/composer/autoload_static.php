@@ -6,10 +6,15 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit4af0617125045f5af1415eb27c5cf86f
 {
+    public static $files = array (
+        '8d50dc88e56bace65e1e72f6017983ed' => __DIR__ . '/..' . '/freemius/wordpress-sdk/start.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'P' => 
         array (
             'PriorPrice\\' => 11,
+            'PhpStanCustomRules\\' => 19,
         ),
     );
 
@@ -17,6 +22,10 @@ class ComposerStaticInit4af0617125045f5af1415eb27c5cf86f
         'PriorPrice\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/PriorPrice',
+        ),
+        'PhpStanCustomRules\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/phpstan-custom-rules',
         ),
     );
 

@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the WC Price History plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: WC Price History 2.1.3\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/gitversion\n"
+"Project-Id-Version: WC Price History 2.1.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wc-price-history\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-09-27T21:55:42+02:00\n"
+"POT-Creation-Date: 2024-12-18T08:05:40+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: wc-price-history\n"
@@ -71,10 +71,18 @@ msgstr ""
 
 #: app/PriorPrice/Ajax.php:34
 #: app/PriorPrice/Ajax.php:45
-#: app/PriorPrice/Ajax.php:57
+#: app/PriorPrice/Ajax.php:61
 #: app/PriorPrice/Export.php:103
 #: app/PriorPrice/Import.php:114
 msgid "Invalid nonce"
+msgstr ""
+
+#: app/PriorPrice/Ajax.php:49
+msgid "You do not have permission to clean history"
+msgstr ""
+
+#: app/PriorPrice/Ajax.php:65
+msgid "You do not have permission to fix history"
 msgstr ""
 
 #: app/PriorPrice/Export.php:57
@@ -91,11 +99,15 @@ msgstr ""
 msgid "Export product with price history to JSON file. Use it only for debugging purposes."
 msgstr ""
 
-#: app/PriorPrice/Export.php:109
+#: app/PriorPrice/Export.php:107
+msgid "You do not have permission to export data"
+msgstr ""
+
+#: app/PriorPrice/Export.php:113
 msgid "Invalid product ID"
 msgstr ""
 
-#: app/PriorPrice/Export.php:115
+#: app/PriorPrice/Export.php:119
 msgid "Product not found"
 msgstr ""
 
@@ -148,19 +160,23 @@ msgstr ""
 msgid "Import"
 msgstr ""
 
-#: app/PriorPrice/Import.php:120
+#: app/PriorPrice/Import.php:118
+msgid "You do not have permission to import data"
+msgstr ""
+
+#: app/PriorPrice/Import.php:124
 msgid "Invalid file, file was not uploaded"
 msgstr ""
 
-#: app/PriorPrice/Import.php:129
+#: app/PriorPrice/Import.php:133
 msgid "Invalid file, the file is empty"
 msgstr ""
 
-#: app/PriorPrice/Import.php:136
+#: app/PriorPrice/Import.php:140
 msgid "Invalid file, the file is not a valid JSON"
 msgstr ""
 
-#: app/PriorPrice/Import.php:171
+#: app/PriorPrice/Import.php:175
 msgid "Product not saved"
 msgstr ""
 
