@@ -28,8 +28,6 @@ class AdminAssets {
 
 		wp_enqueue_script( 'wc-price-history-export', WC_PRICE_HISTORY_PLUGIN_URL . 'assets/js/export.js', [ 'jquery' ], WC_PRICE_HISTORY_VERSION, true );
 
-		wp_enqueue_script( 'wc-price-history-import', WC_PRICE_HISTORY_PLUGIN_URL . 'assets/js/import.js', [ 'jquery' ], WC_PRICE_HISTORY_VERSION, true );
-
 		$nonce = wp_create_nonce( 'wc_price_history' );
 
 		wp_localize_script( 'wc-price-history-admin', 'wc_price_history_admin', [
@@ -49,12 +47,6 @@ class AdminAssets {
 			'nonce' => $nonce,
 		] );
 
-		wp_localize_script( 'wc-price-history-import', 'wc_price_history_import', [
-			'nonce'   => $nonce,
-			'success' => esc_html__( 'Price history has been imported.', 'wc-price-history' ),
-			'error'   => esc_html__( 'An error occurred while importing price history.', 'wc-price-history' ),
-		] );
-
 		if ( ! $this->is_settings_page() ) {
 			return;
 		}
@@ -63,6 +55,6 @@ class AdminAssets {
 	}
 
 	private function is_settings_page() : bool {
-		return isset( $_GET['page'] ) && $_GET['page'] === 'wc-price-history';
+		return isset( $_GET['page'] ) && $_GET['page'] === 'wc-price-history'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 	}
 }
