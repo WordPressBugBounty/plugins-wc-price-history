@@ -7,7 +7,7 @@ Tags: omnibus, WooCommerce, prices, history, lowest
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.2
-Stable tag: 2.1.5
+Stable tag: 2.1.6
 License: Expat
 License URI: https://mit-license.org/
 Donate link: https://buycoffee.to/wpzlecenia
@@ -127,6 +127,9 @@ Yes, on the plugin configuration screen click the button 'Clean history'. This w
 Please submit the [GitHub issue](https://github.com/kkarpieszuk/wc-price-history/issues).
 
 == Changelog ==
+
+= 2.1.6 =
+* Maintenance: Prepare for replacement of Freemius with Keygen. (#135)
 
 = 2.1.5 =
 * Maintenance: Updated content displayed on plugin page in WordPress repository. (#128)
