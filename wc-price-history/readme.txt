@@ -7,14 +7,14 @@ Tags: omnibus, WooCommerce, prices, history, lowest
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.2
-Stable tag: 2.1.6
+Stable tag: 2.1.7
 License: Expat
 License URI: https://mit-license.org/
 Donate link: https://buycoffee.to/wpzlecenia
 What was the lowest price recently? Build customer trust through transparency! Track and display product price history in WooCommerce store.
 == Description ==
 
-Track WooCommerce© Products prior prices history and display the lowest price in the last 30 days. This plugin allows your WC shop to be compliant with European law which specifies price reduction announcement policy.
+[WC Price History](https://wcpricehistory.com) plugin allows you to track WooCommerce© Products prior prices history and display the lowest price in the last 30 days. This plugin allows your WC shop to be compliant with European law which specifies price reduction announcement policy.
 
 == Installation ==
 
@@ -127,6 +127,12 @@ Yes, on the plugin configuration screen click the button 'Clean history'. This w
 Please submit the [GitHub issue](https://github.com/kkarpieszuk/wc-price-history/issues).
 
 == Changelog ==
+
+= 2.1.7 =
+* New: Added action to add custom fields to settings page. (#137)
+* New: Added filter for the lowest price HTML before displaying it. (#139)
+* New: Added filter for the display text from template. (#139)
+* Fixed: Prices displayed with shortcode were not possible to filter to remove decimals. (#141)
 
 = 2.1.6 =
 * Maintenance: Prepare for replacement of Freemius with Keygen. (#135)

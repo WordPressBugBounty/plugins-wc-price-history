@@ -2,14 +2,14 @@
 # This file is distributed under the Expat.
 msgid ""
 msgstr ""
-"Project-Id-Version: WC Price History 2.1.6\n"
+"Project-Id-Version: WC Price History 2.1.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wc-price-history\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-19T15:19:54+00:00\n"
+"POT-Creation-Date: 2025-01-23T20:40:04+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: wc-price-history\n"
@@ -33,7 +33,7 @@ msgid "Konrad Karpieszuk"
 msgstr ""
 
 #. Author URI of the plugin
-msgid "https://wpzlecenia.pl"
+msgid "https://wcpricehistory.com"
 msgstr ""
 
 #: app/PriorPrice/AdminAssets.php:36
@@ -306,60 +306,60 @@ msgstr ""
 msgid "If checked, price will be displayed with line-through on it."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:392
+#: app/PriorPrice/SettingsPage.php:402
 msgid "Danger zone"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:396
+#: app/PriorPrice/SettingsPage.php:406
 msgid "Use these actions with caution!"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:399
+#: app/PriorPrice/SettingsPage.php:409
 msgid "It is really recommended to make a backup of your database beforehand!"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:404
+#: app/PriorPrice/SettingsPage.php:414
 msgid "Fix history"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:414
+#: app/PriorPrice/SettingsPage.php:424
 msgid "Fix prices history"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:417
+#: app/PriorPrice/SettingsPage.php:427
 msgid "Ever happened that you discounted a product and the price history shows the lowest price before discount same as after discount? This action will perhaps fix it."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:422
+#: app/PriorPrice/SettingsPage.php:432
 msgid "Yes: \"perhaps\" does not sound definite, and for good reason: the reasons for the problem described above may vary, so I really recommend taking a backup."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:427
 #: app/PriorPrice/SettingsPage.php:437
+#: app/PriorPrice/SettingsPage.php:447
 msgid "Clean history"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:440
+#: app/PriorPrice/SettingsPage.php:450
 msgid "This action cannot be undone (unless you have a backup). All price history data will be removed."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:451
+#: app/PriorPrice/SettingsPage.php:461
 msgid "Read the EU legal acts:"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:453
+#: app/PriorPrice/SettingsPage.php:463
 msgid "Guidance on the Price Indication Directive (2021)"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:456
+#: app/PriorPrice/SettingsPage.php:466
 msgid "Support"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:459
+#: app/PriorPrice/SettingsPage.php:469
 msgid "If you have any questions, please contact me at plugin support forum."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:463
+#: app/PriorPrice/SettingsPage.php:473
 msgid "Please rate the plugin! "
 msgstr ""
 
