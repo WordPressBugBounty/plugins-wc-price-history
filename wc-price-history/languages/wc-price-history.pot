@@ -2,14 +2,14 @@
 # This file is distributed under the Expat.
 msgid ""
 msgstr ""
-"Project-Id-Version: WC Price History 2.1.7\n"
+"Project-Id-Version: WC Price History 2.1.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wc-price-history\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-23T20:40:04+00:00\n"
+"POT-Creation-Date: 2025-04-06T17:37:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: wc-price-history\n"
@@ -52,27 +52,45 @@ msgstr ""
 msgid "Are you sure you want to fix price history?"
 msgstr ""
 
+#: app/PriorPrice/AdminAssets.php:41
+msgid "Are you sure you want to force first scan to finish?"
+msgstr ""
+
 #: app/PriorPrice/AdminAssets.php:42
+msgid "Are you sure you want to restart first scan?"
+msgstr ""
+
+#: app/PriorPrice/AdminAssets.php:45
 msgid "Price history has been fixed."
 msgstr ""
 
-#: app/PriorPrice/AdminAssets.php:43
+#: app/PriorPrice/AdminAssets.php:46
 msgid "An error occurred while fixing price history."
 msgstr ""
 
-#: app/PriorPrice/Ajax.php:34
-#: app/PriorPrice/Ajax.php:45
-#: app/PriorPrice/Ajax.php:61
+#: app/PriorPrice/Ajax.php:57
+#: app/PriorPrice/Ajax.php:68
+#: app/PriorPrice/Ajax.php:84
+#: app/PriorPrice/Ajax.php:100
+#: app/PriorPrice/Ajax.php:115
 #: app/PriorPrice/Export.php:103
 msgid "Invalid nonce"
 msgstr ""
 
-#: app/PriorPrice/Ajax.php:49
+#: app/PriorPrice/Ajax.php:72
 msgid "You do not have permission to clean history"
 msgstr ""
 
-#: app/PriorPrice/Ajax.php:65
+#: app/PriorPrice/Ajax.php:88
 msgid "You do not have permission to fix history"
+msgstr ""
+
+#: app/PriorPrice/Ajax.php:104
+msgid "You do not have permission to force first scan end"
+msgstr ""
+
+#: app/PriorPrice/Ajax.php:119
+msgid "You do not have permission to restart first scan"
 msgstr ""
 
 #: app/PriorPrice/Export.php:57
@@ -334,33 +352,57 @@ msgstr ""
 msgid "Yes: \"perhaps\" does not sound definite, and for good reason: the reasons for the problem described above may vary, so I really recommend taking a backup."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:437
-#: app/PriorPrice/SettingsPage.php:447
+#: app/PriorPrice/SettingsPage.php:438
+#: app/PriorPrice/SettingsPage.php:448
 msgid "Clean history"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:450
+#: app/PriorPrice/SettingsPage.php:451
 msgid "This action cannot be undone (unless you have a backup). All price history data will be removed."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:461
+#: app/PriorPrice/SettingsPage.php:462
 msgid "Read the EU legal acts:"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:463
+#: app/PriorPrice/SettingsPage.php:464
 msgid "Guidance on the Price Indication Directive (2021)"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:466
+#: app/PriorPrice/SettingsPage.php:467
 msgid "Support"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:469
+#: app/PriorPrice/SettingsPage.php:470
 msgid "If you have any questions, please contact me at plugin support forum."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:473
+#: app/PriorPrice/SettingsPage.php:474
 msgid "Please rate the plugin! "
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:499
+msgid "Force First Scan to Finish"
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:507
+msgid "Force finish scan"
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:511
+msgid "This action will force the first scan to finish. This is useful if the scan is stuck in the middle for a long time."
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:520
+msgid "Restart First Scan"
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:530
+msgid "Restart scan"
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:534
+msgid "This action will restart the first scan. This is useful if you see there are still some products without history."
 msgstr ""
 
 #: plugin.php:41
