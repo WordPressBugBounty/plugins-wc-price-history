@@ -86,7 +86,7 @@ class Prices {
 		/**
 		 * Filter the lowest price HTML before displaying it.
 		 *
-		 * @since 2.1.8
+		 * @since 2.1.9
 		 *
 		 * @param bool|float $lowest_pre Lowest price HTML.
 		 * @param \WC_Product $wc_product WC Product.
@@ -311,7 +311,7 @@ class Prices {
 		/**
 		 * Filter the display text from template.
 		 *
-		 * @since 2.1.8
+		 * @since 2.1.9
 		 *
 		 * @param string    $display_text Display text.
 		 * @param float|int $lowest       Lowest price.

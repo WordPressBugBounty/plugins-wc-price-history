@@ -2,14 +2,14 @@
 # This file is distributed under the Expat.
 msgid ""
 msgstr ""
-"Project-Id-Version: WC Price History 2.1.8\n"
+"Project-Id-Version: WC Price History 2.1.9\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wc-price-history\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-04-06T17:37:42+00:00\n"
+"POT-Creation-Date: 2025-08-29T16:23:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: wc-price-history\n"
@@ -93,9 +93,68 @@ msgstr ""
 msgid "You do not have permission to restart first scan"
 msgstr ""
 
+#: app/PriorPrice/EducationalTab.php:40
+msgid "WC Price History Editor"
+msgstr ""
+
+#: app/PriorPrice/EducationalTab.php:56
+msgid "Coming soon: WC Price History PRO 🎉"
+msgstr ""
+
+#. translators: %1$s: WC Price History PRO
+#: app/PriorPrice/EducationalTab.php:61
+msgid "I am working on %1$s!"
+msgstr ""
+
+#: app/PriorPrice/EducationalTab.php:62
+msgid "WC Price History PRO"
+msgstr ""
+
+#. translators: %1$s: review the full price history, %2$s: edit past prices
+#: app/PriorPrice/EducationalTab.php:68
+#: app/PriorPrice/SettingsPage.php:478
+msgid "In the PRO version you will be able to %1$s and even %2$s directly in your store."
+msgstr ""
+
+#: app/PriorPrice/EducationalTab.php:69
+#: app/PriorPrice/SettingsPage.php:479
+msgid "review the full price history"
+msgstr ""
+
+#: app/PriorPrice/EducationalTab.php:70
+#: app/PriorPrice/SettingsPage.php:480
+msgid "edit past prices"
+msgstr ""
+
+#: app/PriorPrice/EducationalTab.php:75
+msgid "Leave your email below and I will let you know as soon as it's ready."
+msgstr ""
+
+#: app/PriorPrice/EducationalTab.php:76
+msgid "Bonus: Early subscribers may receive a"
+msgstr ""
+
+#: app/PriorPrice/EducationalTab.php:76
+msgid "lifetime license"
+msgstr ""
+
+#: app/PriorPrice/EducationalTab.php:76
+msgid "— normally licenses will be yearly!"
+msgstr ""
+
+#: app/PriorPrice/EducationalTab.php:82
+#: app/PriorPrice/SettingsPage.php:491
+msgid "Click to get notified about the PRO version and get a lifetime license!"
+msgstr ""
+
+#: app/PriorPrice/EducationalTab.php:83
+#: app/PriorPrice/SettingsPage.php:492
+msgid "Notify me about PRO!"
+msgstr ""
+
 #: app/PriorPrice/Export.php:57
-#: app/PriorPrice/SettingsPage.php:49
-#: app/PriorPrice/SettingsPage.php:50
+#: app/PriorPrice/SettingsPage.php:51
+#: app/PriorPrice/SettingsPage.php:52
 msgid "Price History"
 msgstr ""
 
@@ -145,20 +204,24 @@ msgid "Product #%1$d is on sale but has no sale start date. Please edit this pro
 msgstr ""
 
 #. translators: %1$s: opening link HTML tag, %2$s: closing link HTML tag, %3$s 5-star rating symbol, %4$s: smiling face with heart-shaped eyes. Polish translation: Gratulacje za dostosowanie swojego sklepu do prawa Unii Europejskiej Omnibus - wszystko bez wydawania ani grosza! Wyraź swoje uznanie dla WC Price History, pozostawiając pochwalny komentarz i ocenę 5 gwiazdek.
-#: app/PriorPrice/Marketing.php:82
+#: app/PriorPrice/Marketing.php:83
 msgid "Congratulations on making your shop fully compliant with the Omnibus EU law - all without spending a dime! %1$sShow your appreciation for WC Price History by leaving a glowing review and a %3$s rating%2$s! %4$s."
+msgstr ""
+
+#: app/PriorPrice/Marketing.php:101
+msgid "Visit site"
 msgstr ""
 
 #. translators: Do not translate {price}, it is template slug!
 #: app/PriorPrice/SettingsData.php:47
-#: app/PriorPrice/SettingsPage.php:286
+#: app/PriorPrice/SettingsPage.php:288
 msgid "30-day low: {price}"
 msgstr ""
 
 #. translators: Do not translate {days}, it is template slug!
 #: app/PriorPrice/SettingsData.php:53
 #: app/PriorPrice/SettingsData.php:219
-#: app/PriorPrice/SettingsPage.php:356
+#: app/PriorPrice/SettingsPage.php:358
 msgid "Price in the last {days} days is the same as current"
 msgstr ""
 
@@ -167,241 +230,262 @@ msgstr ""
 msgid "30-day low: %s"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:33
+#: app/PriorPrice/SettingsPage.php:35
 msgid "Settings"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:78
+#: app/PriorPrice/SettingsPage.php:80
 msgid "Settings saved."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:83
+#: app/PriorPrice/SettingsPage.php:85
 msgid "Price History Settings"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:93
+#: app/PriorPrice/SettingsPage.php:95
 msgid "Display minimal price on/for:"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:104
+#: app/PriorPrice/SettingsPage.php:106
 msgid "Single product page"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:114
+#: app/PriorPrice/SettingsPage.php:116
 msgid "Related and upsell products on single product page"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:124
+#: app/PriorPrice/SettingsPage.php:126
 msgid "Main shop page"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:134
+#: app/PriorPrice/SettingsPage.php:136
 msgid "Product category page"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:144
+#: app/PriorPrice/SettingsPage.php:146
 msgid "Product tag page"
 msgstr ""
 
 #. translators: %s: [wc_price_history id="3" show_currency="1"] shortcode tag.
-#: app/PriorPrice/SettingsPage.php:150
+#: app/PriorPrice/SettingsPage.php:152
 msgid "...or you can display it anywhere with shortcode %s. Note that id and show_currency parameters are optional"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:156
+#: app/PriorPrice/SettingsPage.php:158
 msgid "Display minimal price when:"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:168
+#: app/PriorPrice/SettingsPage.php:170
 msgid "Always"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:179
+#: app/PriorPrice/SettingsPage.php:181
 msgid "Only when product is On sale"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:183
+#: app/PriorPrice/SettingsPage.php:185
 msgid "Omnibus: European Union Guidance requires displaying the minimal price if a product is on sale."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:189
+#: app/PriorPrice/SettingsPage.php:191
 msgid "For products being on sale, count minimal price from:"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:200
+#: app/PriorPrice/SettingsPage.php:202
 msgid "Current day"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:210
+#: app/PriorPrice/SettingsPage.php:212
 msgid "Day before product went on sale (excludes promotional price)"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:220
+#: app/PriorPrice/SettingsPage.php:222
 msgid "Day when product went on sale (includes promotional price)"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:224
+#: app/PriorPrice/SettingsPage.php:226
 msgid "Omnibus: European Union Guidance requires displaying the lowest price before the sale started."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:227
+#: app/PriorPrice/SettingsPage.php:229
 msgid "Heads up!"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:228
+#: app/PriorPrice/SettingsPage.php:230
 msgid "Option \"Day when product went on sale\" works only for products with \"Sale price dates\" set on Edit product page (setting sale start date will be enough)."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:230
+#: app/PriorPrice/SettingsPage.php:232
 msgid "If product does not have scheduled such date, minimal price will be counted from current day and this option will be ignored."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:234
+#: app/PriorPrice/SettingsPage.php:236
 msgid "WooCommerce > Status > Logs"
 msgstr ""
 
 #. translators: %s: URL to WooCommerce logs page, do not translate wc-price-history, it is a slug
-#: app/PriorPrice/SettingsPage.php:238
+#: app/PriorPrice/SettingsPage.php:240
 msgid "All products which does not have set sale start date will be logged in %s (look for error log with name starting from wc-price-history)."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:256
+#: app/PriorPrice/SettingsPage.php:258
 msgid "Number of days to use when counting minimal price:"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:267
+#: app/PriorPrice/SettingsPage.php:269
 msgid "days"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:270
+#: app/PriorPrice/SettingsPage.php:272
 msgid "Omnibus: European Union Guidance requires displaying lowest price from the last 30 days."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:276
+#: app/PriorPrice/SettingsPage.php:278
 msgid "Minimal price text:"
 msgstr ""
 
 #. translators: Do not translate {price} and {days}, those are template slugs!
-#: app/PriorPrice/SettingsPage.php:292
+#: app/PriorPrice/SettingsPage.php:294
 msgid "Use placeholder {price} to display price and {days} to display number of days."
 msgstr ""
 
 #. translators: %s: {days-set} template slug
-#: app/PriorPrice/SettingsPage.php:302
+#: app/PriorPrice/SettingsPage.php:304
 msgid "What to do when price history is older than %s days:"
 msgstr ""
 
 #. translators: Do not translate {days-set}, it is template slug!
-#: app/PriorPrice/SettingsPage.php:313
+#: app/PriorPrice/SettingsPage.php:315
 msgid "It could happen that the last change of price was more than %s days ago. In that case you can choose to hide minimal price, display current price or display custom text."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:326
+#: app/PriorPrice/SettingsPage.php:328
 msgid "Hide minimal price"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:336
+#: app/PriorPrice/SettingsPage.php:338
 msgid "Display current price"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:346
+#: app/PriorPrice/SettingsPage.php:348
 msgid "Display custom text"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:361
+#: app/PriorPrice/SettingsPage.php:363
 msgid "If you choose to display custom text, use placeholder {days} to display number of days and {price} to display current price."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:367
+#: app/PriorPrice/SettingsPage.php:369
 msgid "When displaying minimal price:"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:378
+#: app/PriorPrice/SettingsPage.php:380
 msgid "Apply line-through on the price"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:382
+#: app/PriorPrice/SettingsPage.php:384
 msgid "If checked, price will be displayed with line-through on it."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:402
+#: app/PriorPrice/SettingsPage.php:404
 msgid "Danger zone"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:406
+#: app/PriorPrice/SettingsPage.php:408
 msgid "Use these actions with caution!"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:409
+#: app/PriorPrice/SettingsPage.php:411
 msgid "It is really recommended to make a backup of your database beforehand!"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:414
+#: app/PriorPrice/SettingsPage.php:416
 msgid "Fix history"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:424
+#: app/PriorPrice/SettingsPage.php:426
 msgid "Fix prices history"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:427
+#: app/PriorPrice/SettingsPage.php:429
 msgid "Ever happened that you discounted a product and the price history shows the lowest price before discount same as after discount? This action will perhaps fix it."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:432
+#: app/PriorPrice/SettingsPage.php:434
 msgid "Yes: \"perhaps\" does not sound definite, and for good reason: the reasons for the problem described above may vary, so I really recommend taking a backup."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:438
-#: app/PriorPrice/SettingsPage.php:448
+#: app/PriorPrice/SettingsPage.php:440
+#: app/PriorPrice/SettingsPage.php:450
 msgid "Clean history"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:451
+#: app/PriorPrice/SettingsPage.php:453
 msgid "This action cannot be undone (unless you have a backup). All price history data will be removed."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:462
-msgid "Read the EU legal acts:"
+#: app/PriorPrice/SettingsPage.php:465
+msgid "Get notified about the PRO version!"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:464
-msgid "Guidance on the Price Indication Directive (2021)"
+#. translators: %1$s: WC Price History PRO
+#: app/PriorPrice/SettingsPage.php:471
+msgid "I am working on %1$s 🎉"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:467
+#: app/PriorPrice/SettingsPage.php:485
+msgid "Click the button below to get notified about the PRO version."
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:496
+msgid "Bonus: Early subscribers may receive a lifetime license — normally licenses will be yearly!"
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:500
 msgid "Support"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:470
+#: app/PriorPrice/SettingsPage.php:503
 msgid "If you have any questions, please contact me at plugin support forum."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:474
+#: app/PriorPrice/SettingsPage.php:509
+msgid "Visit the official website of the plugin"
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:513
 msgid "Please rate the plugin! "
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:499
-msgid "Force First Scan to Finish"
-msgstr ""
-
-#: app/PriorPrice/SettingsPage.php:507
-msgid "Force finish scan"
-msgstr ""
-
-#: app/PriorPrice/SettingsPage.php:511
-msgid "This action will force the first scan to finish. This is useful if the scan is stuck in the middle for a long time."
+#: app/PriorPrice/SettingsPage.php:518
+msgid "Read the EU legal acts:"
 msgstr ""
 
 #: app/PriorPrice/SettingsPage.php:520
+msgid "Guidance on the Price Indication Directive (2021)"
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:542
+msgid "Force First Scan to Finish"
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:550
+msgid "Force finish scan"
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:554
+msgid "This action will force the first scan to finish. This is useful if the scan is stuck in the middle for a long time."
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:563
 msgid "Restart First Scan"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:530
+#: app/PriorPrice/SettingsPage.php:573
 msgid "Restart scan"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:534
+#: app/PriorPrice/SettingsPage.php:577
 msgid "This action will restart the first scan. This is useful if you see there are still some products without history."
 msgstr ""
 
