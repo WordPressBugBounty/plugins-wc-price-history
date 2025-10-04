@@ -7,14 +7,14 @@ use PriorPrice\Helpers\Pro;
 /**
  * Educational tab.
  *
- * @since 2.1.9
+ * @since 2.2.0
  */
 class EducationalTab {
 
 	/**
 	 * Register hooks.
 	 *
-	 * @since 2.1.9
+	 * @since 2.2.0
 	 */
 	public function register_hooks() {
 
@@ -29,7 +29,7 @@ class EducationalTab {
 	/**
 	 * Add tab.
 	 *
-	 * @since 2.1.9
+	 * @since 2.2.0
 	 *
 	 * @return void
 	 */
@@ -45,7 +45,7 @@ class EducationalTab {
 	/**
 	 * Add panel.
 	 *
-	 * @since 2.1.9
+	 * @since 2.2.0
 	 *
 	 * @return void
 	 */

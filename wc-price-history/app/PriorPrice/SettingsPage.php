@@ -389,7 +389,7 @@ class SettingsPage {
 						/**
 						 * Action to add custom fields to settings page.
 						 *
-						 * @since 2.1.9
+						 * @since 2.2.0
 						 *
 						 * @param array $settings
 						 */
@@ -528,7 +528,7 @@ class SettingsPage {
 	/**
 	 * First scan section.
 	 *
-	 * @since 2.1.9
+	 * @since 2.2.0
 	 *
 	 * @param array<string, mixed> $settings Settings.
 	 */

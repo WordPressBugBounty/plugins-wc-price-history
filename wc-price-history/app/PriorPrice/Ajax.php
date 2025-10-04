@@ -12,7 +12,7 @@ class Ajax {
 	/**
 	 * First scan.
 	 *
-	 * @since 2.1.9
+	 * @since 2.2.0
 	 *
 	 * @var FirstScan
 	 */
@@ -21,7 +21,7 @@ class Ajax {
 	/**
 	 * Constructor.
 	 *
-	 * @since 2.1.9
+	 * @since 2.2.0
 	 *
 	 * @param FirstScan $first_scan First scan.
 	 */
