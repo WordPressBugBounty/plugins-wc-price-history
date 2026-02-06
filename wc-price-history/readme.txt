@@ -1,17 +1,17 @@
 === WC Price History ===
 
 Plugin Name: WC Price History
-Short Description: Show the lowest product price in the last 30 days. Configurable, works with Omnibus European Union directive by default.
+Short Description: Show the lowest product price in the last 30 days, Omnibus compliant.
 Contributors: kkarpieszuk
 Tags: omnibus, WooCommerce, prices, history, lowest
 Requires at least: 5.8
-Tested up to: 6.8.3
+Tested up to: 6.9
 Requires PHP: 7.2
-Stable tag: 2.2.0
+Stable tag: 3.0.1
 License: Expat
 License URI: https://mit-license.org/
 Donate link: https://buycoffee.to/wpzlecenia
-What was the lowest price recently? Build customer trust through transparency! Track and display product price history in WooCommerce store.
+What was the lowest price recently? Build customer trust through transparency! Track and display product price history in WooCommerce store. OMNIBUS compliant.
 == Description ==
 
 [WC Price History](https://wcpricehistory.com) plugin allows you to track WooCommerce© Products prior prices history and display the lowest price in the last 30 days. This plugin allows your WC shop to be compliant with European law which specifies price reduction announcement policy.
@@ -126,7 +126,24 @@ Yes, on the plugin configuration screen click the button 'Clean history'. This w
 
 Please submit the [GitHub issue](https://github.com/kkarpieszuk/wc-price-history/issues).
 
+= I like your work, are you available for hire? =
+
+Yes, I am available for hire. Please contact me at [LinkedIn](https://linkedin.com/in/konrad-karpieszuk-38528b11/).
+
 == Changelog ==
+
+= 3.0.1 =
+- Show more detailed plugin status report (#174)
+
+= 3.0.0 =
+- Database Migration: Price History moved from Post Meta to Custom Tables for better performance. See https://wcpricehistory.com/tuorials-howtos/docs/migration-to-database-tables-in-3-0/?utm_source=readme&utm_medium=changelog&utm_campaign=wc-price-history (#98)
+- New: Minimal price displayed with shortcode is now updated when product variant is changed. (#169)
+
+= 2.2.2 =
+- New: Added filter `wc_price_history_variations_add_history_lowest_price` to filter the lowest price for variations. (#167)
+
+= 2.2.1 =
+- Promo: Hire Me Section (#165)
 
 = 2.2.0 =
 - Fix: Plugin sometimes displayed "lowest price: 0" after 30 days when price history became empty due to time filtering. ( #159 )

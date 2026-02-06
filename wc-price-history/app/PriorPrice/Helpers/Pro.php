@@ -5,14 +5,14 @@ namespace PriorPrice\Helpers;
 /**
  * Pro helper.
  *
- * @since 2.2.0
+ * @since 3.0.0
  */
 class Pro {
 
 	/**
 	 * Check if the plugin is pro.
 	 *
-	 * @since 2.2.0
+	 * @since 3.0.0
 	 *
 	 * @return bool
 	 */

@@ -2,7 +2,10 @@
 
 namespace PriorPrice;
 
+use PriorPrice\Database\DbMigration;
+use PriorPrice\Database\Install;
 use PriorPrice\Helpers\Pro;
+use PriorPrice\HistoryStorage;
 
 class SettingsPage {
 
@@ -389,7 +392,7 @@ class SettingsPage {
 						/**
 						 * Action to add custom fields to settings page.
 						 *
-						 * @since 2.2.0
+						 * @since 3.0.0
 						 *
 						 * @param array $settings
 						 */
@@ -461,6 +464,8 @@ class SettingsPage {
 			<div class="wc-history-price-admin__right">
 				<div class="wc-history-price-admin__right__box">
 
+					<?php $this->hire_me_section(); ?>
+
 					<?php if ( ! Pro::is_pro() ) : ?>
 					<h3><?php esc_html_e( 'Get notified about the PRO version!', 'wc-price-history' ); ?></h3>
 
@@ -493,7 +498,7 @@ class SettingsPage {
 					</button>
 
 					<p>
-						<em><?php esc_html_e( 'Bonus: Early subscribers may receive a lifetime license — normally licenses will be yearly!', 'wc-price-history' ); ?></em>
+						<em><?php esc_html_e( 'Bonus: Early subscribers may receive a lifetime license - normally licenses will be yearly!', 'wc-price-history' ); ?></em>
 					</p>
 
 					<?php endif; ?>
@@ -519,6 +524,78 @@ class SettingsPage {
 					<p class="description">
 						<a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021XC1229(06)" target="_blank"><?php esc_html_e( 'Guidance on the Price Indication Directive (2021)', 'wc-price-history' ); ?></a>
 					</p>
+
+					<h3><?php esc_html_e( 'Status', 'wc-price-history' ); ?></h3>
+					<?php
+					$history_storage = new HistoryStorage();
+					$uses_tables     = $history_storage->should_use_tables();
+					?>
+					<details class="wc-price-history-storage-status">
+						<summary>
+							<strong><?php esc_html_e( 'Storage method:', 'wc-price-history' ); ?></strong>
+							<?php
+							if ( $uses_tables ) {
+								?>
+								<?php esc_html_e( 'Database tables', 'wc-price-history' ); ?>
+								<?php
+							} else {
+								?>
+								<?php esc_html_e( 'Post meta (legacy)', 'wc-price-history' ); ?>
+								<?php
+							}
+							?>
+						</summary>
+						<p class="description" style="margin-top: 0.5em;">
+							<?php
+							if ( $uses_tables ) {
+								esc_html_e( 'Great! The plugin is using dedicated database tables for storing price history. This provides better performance and scalability.', 'wc-price-history' );
+								$migration_status = DbMigration::get_migration_status( true );
+								$table_names      = Install::get_table_names();
+								?>
+								</p>
+								<p class="description" style="margin-top: 0.5em;">
+									<strong><?php esc_html_e( 'Why tables are used:', 'wc-price-history' ); ?></strong>
+									<?php
+									if ( $migration_status === DbMigration::STATUS_COMPLETED ) {
+										esc_html_e( 'Migration from post meta has been completed.', 'wc-price-history' );
+									} else if ( $migration_status === DbMigration::STATUS_NOT_NEEDED ) {
+										esc_html_e( 'Migration was not needed (e.g. fresh install with database tables).', 'wc-price-history' );
+									} else if ( $migration_status === false ) {
+										esc_html_e( 'Migration status is not set.', 'wc-price-history' );
+								    } else {
+										printf(
+											esc_html__( 'Migration status is %s.', 'wc-price-history' ),
+											'<strong>' . esc_attr( $migration_status ) . '</strong>'
+										);
+									}
+									?>
+								</p>
+								<p class="description" style="margin-top: 0.5em;">
+									<strong><?php esc_html_e( 'Tables:', 'wc-price-history' ); ?></strong>
+									<?php
+									global $wpdb;
+									$rows = [];
+									foreach ( $table_names as $table_name ) {
+										// phpcs:ignore WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.DirectDatabaseQuery.DirectQuery
+										$exists = $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $table_name ) ) === $table_name;
+										if ( $exists ) {
+											// phpcs:ignore WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.DirectDatabaseQuery.DirectQuery
+											$count = $wpdb->get_var( "SELECT COUNT(*) FROM `{$table_name}`" );
+											$rows[] = $table_name . ' (' . (string) (int) $count . ' ' . esc_html__( 'rows', 'wc-price-history' ) . ')';
+										} else {
+											$rows[] = $table_name . ' (' . esc_html__( 'table missing', 'wc-price-history' ) . ')';
+										}
+									}
+									echo esc_html( implode( ', ', $rows ) );
+									?>
+								</p>
+							<?php } else {
+								esc_html_e( 'The plugin is using post meta for storing price history. Consider migrating to database tables for better performance.', 'wc-price-history' );
+								?>
+						</p>
+							<?php }
+							?>
+					</details>
 				</div>
 			</div>
 		</div>
@@ -528,7 +605,7 @@ class SettingsPage {
 	/**
 	 * First scan section.
 	 *
-	 * @since 2.2.0
+	 * @since 3.0.0
 	 *
 	 * @param array<string, mixed> $settings Settings.
 	 */
@@ -581,5 +658,59 @@ class SettingsPage {
 		</tr>
 		<?php
 		}
+	}
+
+	/**
+	 * Hire me section.
+	 *
+	 * @since 3.0.0
+	 */
+	private function hire_me_section(): void {
+
+		$avatar   = WC_PRICE_HISTORY_PLUGIN_URL . 'assets/images/me.webp';
+		$variants = [
+			[
+				'title' => __('Hire Me - Senior WooCommerce Engineer', 'wc-price-history'),
+				'description' => '<p>15+ years building the plugins you already use: <br>ACF, WPForms, WPML, WooCommerce extensions - and even WordPress Core (Gutenberg).</p><p>
+I also integrate <b>AI automation</b> directly into WP & e-commerce workflows.</p><p>
+↘️ <b>Remote-only • Full-time • Ready to join your team</b> ↙️</p><p>
+<b>Let’s talk:</b> <a href="https://linkedin.com/in/konrad-karpieszuk-38528b11/" target="_blank">linkedin.com/in/konrad-karpieszuk-38528b11/</a></p>',
+			],
+			[
+				'title' => __('Need WooCommerce Expertise?', 'wc-price-history'),
+				'description' => '<p>Architect of high-performance stores, complex API integrations & EU-compliant pricing.</p><p>
+<b>AI automation for real business impact</b>.</p><p>
+<b>Remote Senior available:</b> <a href="https://linkedin.com/in/konrad-karpieszuk-38528b11/" target="_blank">linkedin.com/in/konrad-karpieszuk-38528b11/</a></p>',
+			],
+			[
+				'title' => __('Hire a Senior who delivers', 'wc-price-history'),
+				'description' => '<p>I’ve built and maintained major WordPress ecosystem products used by millions.</p><p>
+I blend engineering, performance, UX and <b>AI-enhanced workflows</b>.</p><p>
+If your agency scales - I can help.</p><p>
+<b>Let’s connect:</b> <a href="https://linkedin.com/in/konrad-karpieszuk-38528b11/" target="_blank">linkedin.com/in/konrad-karpieszuk-38528b11/</a></p>',
+			],
+			[
+				'title' => __('I help WooCommerce stores sell more & break less', 'wc-price-history'),
+				'description' => '<p>25+ years of coding, 10+ in large product teams.</p><p>
+Expert in performance, automation & revenue-driven e-commerce improvements.</p><p>
+<b>Available full-time - Remote only.</b></p><p>
+<b>Let’s connect:</b> <a href="https://linkedin.com/in/konrad-karpieszuk-38528b11/" target="_blank">linkedin.com/in/konrad-karpieszuk-38528b11/</a></p>',
+			],
+		];
+
+		$variant = $variants[array_rand($variants)];
+
+		printf(
+			'<h3>%s</h3>',
+			$variant['title']
+		);
+		printf(
+			'<div class="wc-price-history-hire-me-section">
+				<img class="wc-price-history-hire-me-section__img" src="%s" alt="Konrad Karpieszuk" width="100" height="100">
+				<div>%s</div>
+			</div>',
+			wp_kses_post($avatar),
+			wp_kses_post($variant['description'])
+		);
 	}
 }

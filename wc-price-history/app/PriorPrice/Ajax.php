@@ -2,6 +2,8 @@
 
 namespace PriorPrice;
 
+use PriorPrice\Database\DbMigration;
+
 /**
  * Ajax class.
  *
@@ -12,7 +14,7 @@ class Ajax {
 	/**
 	 * First scan.
 	 *
-	 * @since 2.2.0
+	 * @since 3.0.0
 	 *
 	 * @var FirstScan
 	 */
@@ -21,7 +23,7 @@ class Ajax {
 	/**
 	 * Constructor.
 	 *
-	 * @since 2.2.0
+	 * @since 3.0.0
 	 *
 	 * @param FirstScan $first_scan First scan.
 	 */
@@ -42,6 +44,7 @@ class Ajax {
 		add_action( 'wp_ajax_wc_price_history_fix_history', [ $this, 'fix_history' ] );
 		add_action( 'wp_ajax_wc_price_history_force_first_scan_end', [ $this, 'force_first_scan_end' ] );
 		add_action( 'wp_ajax_wc_price_history_restart_first_scan', [ $this, 'restart_first_scan' ] );
+		add_action( 'wp_ajax_wc_price_history_migrate_batch', [ $this, 'migrate_batch' ] );
 	}
 
 	/**
@@ -122,5 +125,27 @@ class Ajax {
 		$this->first_scan->restart();
 
 		wp_send_json_success();
+	}
+
+	/**
+	 * Migrate batch of products to database tables.
+	 *
+	 * @since 3.0.0
+	 *
+	 * @return void
+	 */
+	public function migrate_batch(): void {
+
+		if ( ! check_ajax_referer( 'wc_price_history', 'security', false ) ) {
+			wp_send_json_error( [ 'message' => esc_html__( 'Invalid nonce', 'wc-price-history' ) ] );
+		}
+
+		if ( ! current_user_can( 'manage_woocommerce' ) ) {
+			wp_send_json_error( [ 'message' => esc_html__( 'You do not have permission to run migration', 'wc-price-history' ) ] );
+		}
+
+		$result = DbMigration::migrate_batch();
+
+		wp_send_json_success( $result );
 	}
 }
