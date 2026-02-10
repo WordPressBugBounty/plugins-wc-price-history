@@ -7,7 +7,7 @@ Tags: omnibus, WooCommerce, prices, history, lowest
 Requires at least: 5.8
 Tested up to: 6.9.1
 Requires PHP: 7.2
-Stable tag: 3.1.0
+Stable tag: 3.2.0
 License: Expat
 License URI: https://mit-license.org/
 Donate link: https://buycoffee.to/wpzlecenia
@@ -131,6 +131,10 @@ Please submit the [GitHub issue](https://github.com/kkarpieszuk/wc-price-history
 Yes, I am available for hire. Please contact me at [LinkedIn](https://linkedin.com/in/konrad-karpieszuk-38528b11/).
 
 == Changelog ==
+
+= 3.2.0 =
+- Fix: Lowest price (30-day low) now displays on a new line in themes that use flex/inline price layout (e.g. Twenty Twenty-Five). (#183)
+- Enhancement: Added option to defer displaying lowest price for variable products until a variant is selected. (#185)
 
 = 3.1.0 =
 - Fix: The lowest product variant prices were not displayed if product page was displayed with Gutenberg Blocks (#181)
