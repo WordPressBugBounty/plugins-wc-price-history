@@ -3,7 +3,7 @@
         'name' => 'kkarpieszuk/prior-price',
         'pretty_version' => 'dev-develop',
         'version' => 'dev-develop',
-        'reference' => '9348a0254b1b52b3492a7cbefc657c7b13039d48',
+        'reference' => '285583dad42ce491785f87a7a4c55e489a65e2a2',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'kkarpieszuk/prior-price' => array(
             'pretty_version' => 'dev-develop',
             'version' => 'dev-develop',
-            'reference' => '9348a0254b1b52b3492a7cbefc657c7b13039d48',
+            'reference' => '285583dad42ce491785f87a7a4c55e489a65e2a2',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

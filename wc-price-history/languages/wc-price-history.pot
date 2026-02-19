@@ -2,14 +2,14 @@
 # This file is distributed under the Expat.
 msgid ""
 msgstr ""
-"Project-Id-Version: WC Price History 3.2.1\n"
+"Project-Id-Version: WC Price History 3.2.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wc-price-history\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-13T08:18:50+00:00\n"
+"POT-Creation-Date: 2026-02-19T08:15:53+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: wc-price-history\n"
@@ -182,59 +182,57 @@ msgstr ""
 msgid "WC Price History Editor"
 msgstr ""
 
+#: app/PriorPrice/EducationalTab.php:57
+msgid "Fix pricing mistakes & stay compliant"
+msgstr ""
+
 #: app/PriorPrice/EducationalTab.php:58
-msgid "Coming soon: WC Price History PRO 🎉"
+msgid "Take full control over your price history"
 msgstr ""
 
-#. translators: %1$s: WC Price History PRO
-#: app/PriorPrice/EducationalTab.php:63
-msgid "I am working on %1$s!"
+#: app/PriorPrice/EducationalTab.php:59
+msgid "Need to edit past prices?"
 msgstr ""
 
-#: app/PriorPrice/EducationalTab.php:64
-msgid "WC Price History PRO"
+#: app/PriorPrice/EducationalTab.php:69
+msgid "Trusted by 4000+ stores"
 msgstr ""
 
-#. translators: %1$s: review the full price history, %2$s: edit past prices
-#: app/PriorPrice/EducationalTab.php:70
-#: app/PriorPrice/SettingsPage.php:520
-msgid "In the PRO version you will be able to %1$s and even %2$s directly in your store."
+#: app/PriorPrice/EducationalTab.php:73
+msgid "Accidentally entered the wrong price? Correct it instantly."
 msgstr ""
 
-#: app/PriorPrice/EducationalTab.php:71
-#: app/PriorPrice/SettingsPage.php:521
-msgid "review the full price history"
+#: app/PriorPrice/EducationalTab.php:74
+msgid "Manually override the lowest price to ensure logical Omnibus display."
 msgstr ""
 
-#: app/PriorPrice/EducationalTab.php:72
-#: app/PriorPrice/SettingsPage.php:522
-msgid "edit past prices"
+#: app/PriorPrice/EducationalTab.php:75
+msgid "View detailed log: see exactly when and how prices changed."
 msgstr ""
 
-#: app/PriorPrice/EducationalTab.php:77
-msgid "Leave your email below and I will let you know as soon as it's ready."
+#: app/PriorPrice/EducationalTab.php:76
+msgid "Set fixed lowest prices, if needed."
 msgstr ""
 
-#: app/PriorPrice/EducationalTab.php:78
-msgid "Bonus: Early subscribers may receive a"
-msgstr ""
-
-#: app/PriorPrice/EducationalTab.php:78
-msgid "lifetime license"
-msgstr ""
-
-#: app/PriorPrice/EducationalTab.php:78
-msgid "— normally licenses will be yearly!"
+#: app/PriorPrice/EducationalTab.php:79
+msgid "€49 / site / year"
 msgstr ""
 
 #: app/PriorPrice/EducationalTab.php:84
-#: app/PriorPrice/SettingsPage.php:533
-msgid "Click to get notified about the PRO version and get a lifetime license!"
+#: app/PriorPrice/SettingsPage.php:528
+msgid "Get WC Price History PRO"
 msgstr ""
 
 #: app/PriorPrice/EducationalTab.php:85
-#: app/PriorPrice/SettingsPage.php:534
-msgid "Notify me about PRO!"
+msgid "Unlock Price Editor"
+msgstr ""
+
+#: app/PriorPrice/EducationalTab.php:88
+msgid "Learn more — you can choose the number of licenses there"
+msgstr ""
+
+#: app/PriorPrice/EducationalTab.php:89
+msgid "Watch demo video on Youtube"
 msgstr ""
 
 #: app/PriorPrice/Export.php:57
@@ -532,139 +530,152 @@ msgid "This action cannot be undone (unless you have a backup). All price histor
 msgstr ""
 
 #: app/PriorPrice/SettingsPage.php:507
-msgid "Get notified about the PRO version!"
+#: app/PriorPrice/SettingsPage.php:514
+msgid "WC Price History PRO"
 msgstr ""
 
 #. translators: %1$s: WC Price History PRO
 #: app/PriorPrice/SettingsPage.php:513
-msgid "I am working on %1$s 🎉"
+msgid "Upgrade to %1$s to review the full price history and edit past prices directly in your store."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:527
-msgid "Click the button below to get notified about the PRO version."
+#: app/PriorPrice/SettingsPage.php:519
+msgid "Pricing (per site, per year):"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:538
-msgid "Bonus: Early subscribers may receive a lifetime license - normally licenses will be yearly!"
+#: app/PriorPrice/SettingsPage.php:520
+msgid "€49 — 1 license"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:542
+#: app/PriorPrice/SettingsPage.php:521
+msgid "€45 per license — 5 licenses"
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:522
+msgid "€40 per license — 20 licenses"
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:529
+msgid "Get PRO"
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:533
 msgid "Support"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:545
+#: app/PriorPrice/SettingsPage.php:536
 msgid "If you have any questions, please contact me at plugin support forum."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:551
+#: app/PriorPrice/SettingsPage.php:542
 msgid "Visit the official website of the plugin"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:555
+#: app/PriorPrice/SettingsPage.php:546
 msgid "Please rate the plugin! "
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:560
+#: app/PriorPrice/SettingsPage.php:551
 msgid "Read the EU legal acts:"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:562
+#: app/PriorPrice/SettingsPage.php:553
 msgid "Guidance on the Price Indication Directive (2021)"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:565
+#: app/PriorPrice/SettingsPage.php:556
 msgid "Status"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:572
+#: app/PriorPrice/SettingsPage.php:563
 msgid "Storage method:"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:576
+#: app/PriorPrice/SettingsPage.php:567
 msgid "Database tables"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:580
+#: app/PriorPrice/SettingsPage.php:571
 msgid "Post meta (legacy)"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:588
+#: app/PriorPrice/SettingsPage.php:579
 msgid "Great! The plugin is using dedicated database tables for storing price history. This provides better performance and scalability."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:594
+#: app/PriorPrice/SettingsPage.php:585
 msgid "Why tables are used:"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:597
+#: app/PriorPrice/SettingsPage.php:588
 msgid "Migration from post meta has been completed."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:599
+#: app/PriorPrice/SettingsPage.php:590
 msgid "Migration was not needed (e.g. fresh install with database tables)."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:601
+#: app/PriorPrice/SettingsPage.php:592
 msgid "Migration status is not set."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:604
+#: app/PriorPrice/SettingsPage.php:595
 msgid "Migration status is %s."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:611
+#: app/PriorPrice/SettingsPage.php:602
 msgid "Tables:"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:621
+#: app/PriorPrice/SettingsPage.php:612
 msgid "rows"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:623
+#: app/PriorPrice/SettingsPage.php:614
 msgid "table missing"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:630
+#: app/PriorPrice/SettingsPage.php:621
 msgid "The plugin is using post meta for storing price history. Consider migrating to database tables for better performance."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:656
+#: app/PriorPrice/SettingsPage.php:647
 msgid "Force First Scan to Finish"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:664
+#: app/PriorPrice/SettingsPage.php:655
 msgid "Force finish scan"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:668
+#: app/PriorPrice/SettingsPage.php:659
 msgid "This action will force the first scan to finish. This is useful if the scan is stuck in the middle for a long time."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:677
+#: app/PriorPrice/SettingsPage.php:668
 msgid "Restart First Scan"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:687
+#: app/PriorPrice/SettingsPage.php:678
 msgid "Restart scan"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:691
+#: app/PriorPrice/SettingsPage.php:682
 msgid "This action will restart the first scan. This is useful if you see there are still some products without history."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:710
+#: app/PriorPrice/SettingsPage.php:701
 msgid "Hire Me - Senior WooCommerce Engineer"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:717
+#: app/PriorPrice/SettingsPage.php:708
 msgid "Need WooCommerce Expertise?"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:723
+#: app/PriorPrice/SettingsPage.php:714
 msgid "Hire a Senior who delivers"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:730
+#: app/PriorPrice/SettingsPage.php:721
 msgid "I help WooCommerce stores sell more & break less"
 msgstr ""
 
