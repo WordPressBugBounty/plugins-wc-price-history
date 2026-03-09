@@ -7,7 +7,7 @@ Tags: omnibus, WooCommerce, prices, history, lowest
 Requires at least: 5.8
 Tested up to: 6.9.1
 Requires PHP: 7.2
-Stable tag: 3.2.2
+Stable tag: 3.2.3
 License: Expat
 License URI: https://mit-license.org/
 Donate link: https://buycoffee.to/wpzlecenia
@@ -131,6 +131,9 @@ Please submit the [GitHub issue](https://github.com/kkarpieszuk/wc-price-history
 Yes, I am available for hire. Please contact me at [LinkedIn](https://linkedin.com/in/konrad-karpieszuk-38528b11/).
 
 == Changelog ==
+
+= 3.2.3 =
+- Fix: "Day before product went on sale" – lowest price now excludes sale start moment (was showing promotional price). (#192)
 
 = 3.2.2 =
 - Fix: Custom DB tables – when saving the first price for a product, save it for the current moment and for 24h and 48h earlier so "lowest price in 30 days" has data from day one. Use NULL for sale_price when not set (not 0). (#188)
