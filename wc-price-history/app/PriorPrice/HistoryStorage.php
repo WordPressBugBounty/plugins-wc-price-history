@@ -55,7 +55,7 @@ class HistoryStorage {
 		}
 
 		// Allow forcing legacy post_meta storage for troubleshooting.
-		if ( defined( 'WC_PRICE_HISTORY_USE_POST_META' ) && WC_PRICE_HISTORY_USE_POST_META ) {
+		if ( defined( 'WC_PRICE_HISTORY_USE_POST_META' ) && (bool) constant( 'WC_PRICE_HISTORY_USE_POST_META' ) ) {
 			$use_tables = false;
 			return $use_tables;
 		}
@@ -154,19 +154,28 @@ class HistoryStorage {
 
 		// For "sale_start" (exclude promotional price) use strict < so we only consider history before sale started.
 		$include_sale_start = ( $count_from === 'sale_start_inclusive' );
+		$cutoff_timestamp   = $sale_start_timestamp - ( $days * DAY_IN_SECONDS );
 
-		// Get only $days last items.
-		$the_last = array_filter(
-			$history,
-			static function( $timestamp ) use ( $days, $sale_start_timestamp, $include_sale_start ) {
-				$in_range = $timestamp >= ( $sale_start_timestamp - ( $days * DAY_IN_SECONDS ) );
-				$before_end = $include_sale_start ? ( $timestamp <= $sale_start_timestamp ) : ( $timestamp < $sale_start_timestamp );
-				return $in_range && $before_end;
-			},
-			ARRAY_FILTER_USE_KEY
-		);
+		$window_prices = [];
+		$older_prices  = [];
 
-		return $this->reduce_to_minimal( $the_last );
+		foreach ( $history as $timestamp => $price ) {
+			$before_sale_end = $include_sale_start
+				? ( $timestamp <= $sale_start_timestamp )
+				: ( $timestamp < $sale_start_timestamp );
+
+			if ( ! $before_sale_end ) {
+				continue;
+			}
+
+			if ( $timestamp >= $cutoff_timestamp ) {
+				$window_prices[ $timestamp ] = $price;
+			} else {
+				$older_prices[ $timestamp ] = $price;
+			}
+		}
+
+		return $this->reduce_to_minimal( ! empty( $window_prices ) ? $window_prices : $older_prices );
 	}
 
 	/**
@@ -324,7 +333,11 @@ class HistoryStorage {
 			return [];
 		}
 
-		$price = (float) $product->get_price();
+		$price = apply_filters(
+			'wc_price_history_price_raw_non_taxed',
+			(float) $product->get_price(),
+			$product
+		);
 
 		if ( $price <= 0 ) {
 			// Don't create history for products with zero or negative prices

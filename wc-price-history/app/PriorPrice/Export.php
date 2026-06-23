@@ -2,6 +2,8 @@
 
 namespace PriorPrice;
 
+use PriorPrice\Database\DbMigration;
+use PriorPrice\Database\Install;
 use WC_Product;
 use WC_Product_Variable;
 
@@ -119,19 +121,24 @@ class Export {
 			wp_send_json_error( [ 'message' => esc_html__( 'Product not found', 'wc-price-history' ) ] );
 		}
 
-		$history = $this->history_storage->get_history( $product_id );
+		$history    = $this->history_storage->get_history( $product_id );
+		$sale_start = get_post_meta( $product_id, '_sale_price_dates_from', true );
 
-		$plugin_settings = $this->settings_data->get_settings();
-
-		$atrs = $product->get_attributes( 'edit' );
+		$plugin_settings = array_merge(
+			$this->settings_data->get_settings(),
+			[ 'storage_method' => $this->get_storage_method_export_data() ]
+		);
 
 		$product_data = [
-			'regular_price' => $product->get_regular_price(),
-			'sale_price'    => $product->get_sale_price(),
-			'product_id'    => $product_id,
-			'product_name'  => $product->get_name(),
-			'attributes'    => $product->get_attributes( 'edit' ),
-			'history'       => $history,
+			'regular_price'          => $product->get_regular_price(),
+			'sale_price'             => $product->get_sale_price(),
+			'sale_start_date_is_set' => $sale_start !== '',
+			'sale_start'             => $sale_start,
+			'product_id'             => $product_id,
+			'product_name'           => $product->get_name(),
+			'permalink'              => $product->get_permalink(),
+			'attributes'             => $product->get_attributes( 'edit' ),
+			'history'                => $history,
 		];
 
 		$export_data = [
@@ -146,15 +153,19 @@ class Export {
 			foreach ( $variations as $variation ) {
 
 				/** @var WC_Product $variation */
-				$variation_history = $this->history_storage->get_history( $variation->get_id() );
+				$variation_history    = $this->history_storage->get_history( $variation->get_id() );
+				$variation_sale_start = get_post_meta( $variation->get_id(), '_sale_price_dates_from', true );
 
 				$variation_data = [
-					'regular_price' => $variation->get_regular_price(),
-					'sale_price'    => $variation->get_sale_price(),
-					'product_id'    => $variation->get_id(),
-					'product_name'  => $variation->get_name(),
-					'attributes'    => $variation->get_attributes( 'edit' ),
-					'history'       => $variation_history,
+					'regular_price'          => $variation->get_regular_price(),
+					'sale_price'             => $variation->get_sale_price(),
+					'sale_start_date_is_set' => $variation_sale_start !== '',
+					'sale_start'             => $variation_sale_start,
+					'product_id'             => $variation->get_id(),
+					'product_name'           => $variation->get_name(),
+					'permalink'              => $variation->get_permalink(),
+					'attributes'             => $variation->get_attributes( 'edit' ),
+					'history'                => $variation_history,
 				];
 
 				$export_data['variations'][] = $variation_data;
@@ -168,5 +179,64 @@ class Export {
 		];
 
 		wp_send_json_success( $result );
+	}
+
+	/**
+	 * Get storage method detailed info for export (same as in WC > Price History settings right column).
+	 *
+	 * @since 3.2.4
+	 *
+	 * @return array<string, mixed> Storage method details.
+	 */
+	private function get_storage_method_export_data(): array {
+		$storage = new HistoryStorage();
+		$uses_tables = $storage->should_use_tables();
+
+		$data = [
+			'method'        => $uses_tables ? 'database_tables' : 'post_meta',
+			'method_label'  => $uses_tables
+				? __( 'Database tables', 'wc-price-history' )
+				: __( 'Post meta (legacy)', 'wc-price-history' ),
+		];
+
+		if ( $uses_tables ) {
+			$migration_status = DbMigration::get_migration_status( true );
+			$data['migration_status'] = $migration_status;
+			if ( $migration_status === DbMigration::STATUS_COMPLETED ) {
+				$data['migration_status_label'] = __( 'Migration from post meta has been completed.', 'wc-price-history' );
+			} elseif ( $migration_status === DbMigration::STATUS_NOT_NEEDED ) {
+				$data['migration_status_label'] = __( 'Migration was not needed (e.g. fresh install with database tables).', 'wc-price-history' );
+			} elseif ( $migration_status === false ) {
+				$data['migration_status_label'] = __( 'Migration status is not set.', 'wc-price-history' );
+			} else {
+				$data['migration_status_label'] = sprintf(
+					__( 'Migration status is %s.', 'wc-price-history' ),
+					$migration_status
+				);
+			}
+
+			global $wpdb;
+			$table_names = Install::get_table_names();
+			$data['tables'] = [];
+			foreach ( $table_names as $table_name ) {
+				// phpcs:ignore WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.DirectDatabaseQuery.DirectQuery
+				$exists = $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $table_name ) ) === $table_name;
+				$row = [
+					'name'   => $table_name,
+					'exists' => $exists,
+				];
+				if ( $exists ) {
+					// phpcs:ignore WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.DirectDatabaseQuery.DirectQuery
+					$row['row_count'] = (int) $wpdb->get_var( "SELECT COUNT(*) FROM `{$table_name}`" );
+				} else {
+					$row['row_count'] = null;
+				}
+				$data['tables'][] = $row;
+			}
+		} else {
+			$data['description'] = __( 'The plugin is using post meta for storing price history. Consider migrating to database tables for better performance.', 'wc-price-history' );
+		}
+
+		return $data;
 	}
 }

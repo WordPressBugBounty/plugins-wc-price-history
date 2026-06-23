@@ -5,9 +5,9 @@ Short Description: Show the lowest product price in the last 30 days, Omnibus co
 Contributors: kkarpieszuk
 Tags: omnibus, WooCommerce, prices, history, lowest
 Requires at least: 5.8
-Tested up to: 6.9.1
+Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 3.2.3
+Stable tag: 3.2.4
 License: Expat
 License URI: https://mit-license.org/
 Donate link: https://buycoffee.to/wpzlecenia
@@ -131,6 +131,12 @@ Please submit the [GitHub issue](https://github.com/kkarpieszuk/wc-price-history
 Yes, I am available for hire. Please contact me at [LinkedIn](https://linkedin.com/in/konrad-karpieszuk-38528b11/).
 
 == Changelog ==
+
+= 3.2.4 =
+- Enhancement: Optional WooCommerce REST API fields `wc_price_history.lowest` and `wc_price_history.history` (settings under WooCommerce → Price History, off by default). (#202)
+- Enhancement: More data in exported JSON file (#195)
+- Fix: When counting from sale start, if the configured period before the sale has no history entries (e.g. no product edits for a long time), use the lowest price from older history still before the sale start. (#208)
+- Compatibility: Added compatibility with WooCommerce Product Bundles plugin: if bundled products are priced individually, it was not taken into account when stored Bundle Product in history. Requires WC Price History Pro 1.0.1 or later. (#145)
 
 = 3.2.3 =
 - Fix: "Day before product went on sale" – lowest price now excludes sale start moment (was showing promotional price). (#192)

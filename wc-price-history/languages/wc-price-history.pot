@@ -2,14 +2,14 @@
 # This file is distributed under the Expat.
 msgid ""
 msgstr ""
-"Project-Id-Version: WC Price History 3.2.3\n"
+"Project-Id-Version: WC Price History 3.2.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wc-price-history\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-03-09T09:20:14+00:00\n"
+"POT-Creation-Date: 2026-06-23T07:48:46+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: wc-price-history\n"
@@ -95,7 +95,7 @@ msgstr ""
 #: app/PriorPrice/Ajax.php:118
 #: app/PriorPrice/Ajax.php:140
 #: app/PriorPrice/Database/AdminNotice.php:105
-#: app/PriorPrice/Export.php:103
+#: app/PriorPrice/Export.php:105
 msgid "Invalid nonce"
 msgstr ""
 
@@ -219,7 +219,7 @@ msgid "€49 / site / year"
 msgstr ""
 
 #: app/PriorPrice/EducationalTab.php:84
-#: app/PriorPrice/SettingsPage.php:528
+#: app/PriorPrice/SettingsPage.php:563
 msgid "Get WC Price History PRO"
 msgstr ""
 
@@ -235,30 +235,65 @@ msgstr ""
 msgid "Watch demo video on Youtube"
 msgstr ""
 
-#: app/PriorPrice/Export.php:57
+#: app/PriorPrice/Export.php:59
 #: app/PriorPrice/SettingsPage.php:54
 #: app/PriorPrice/SettingsPage.php:55
 msgid "Price History"
 msgstr ""
 
-#: app/PriorPrice/Export.php:84
+#: app/PriorPrice/Export.php:86
 msgid "Export debug data"
 msgstr ""
 
-#: app/PriorPrice/Export.php:88
+#: app/PriorPrice/Export.php:90
 msgid "Export product with price history to JSON file. Use it only for debugging purposes."
 msgstr ""
 
-#: app/PriorPrice/Export.php:107
+#: app/PriorPrice/Export.php:109
 msgid "You do not have permission to export data"
 msgstr ""
 
-#: app/PriorPrice/Export.php:113
+#: app/PriorPrice/Export.php:115
 msgid "Invalid product ID"
 msgstr ""
 
-#: app/PriorPrice/Export.php:119
+#: app/PriorPrice/Export.php:121
 msgid "Product not found"
+msgstr ""
+
+#: app/PriorPrice/Export.php:198
+#: app/PriorPrice/SettingsPage.php:602
+msgid "Database tables"
+msgstr ""
+
+#: app/PriorPrice/Export.php:199
+#: app/PriorPrice/SettingsPage.php:606
+msgid "Post meta (legacy)"
+msgstr ""
+
+#: app/PriorPrice/Export.php:206
+#: app/PriorPrice/SettingsPage.php:623
+msgid "Migration from post meta has been completed."
+msgstr ""
+
+#: app/PriorPrice/Export.php:208
+#: app/PriorPrice/SettingsPage.php:625
+msgid "Migration was not needed (e.g. fresh install with database tables)."
+msgstr ""
+
+#: app/PriorPrice/Export.php:210
+#: app/PriorPrice/SettingsPage.php:627
+msgid "Migration status is not set."
+msgstr ""
+
+#: app/PriorPrice/Export.php:213
+#: app/PriorPrice/SettingsPage.php:630
+msgid "Migration status is %s."
+msgstr ""
+
+#: app/PriorPrice/Export.php:237
+#: app/PriorPrice/SettingsPage.php:656
+msgid "The plugin is using post meta for storing price history. Consider migrating to database tables for better performance."
 msgstr ""
 
 #: app/PriorPrice/FirstScan.php:87
@@ -297,25 +332,25 @@ msgid "Visit site"
 msgstr ""
 
 #. translators: Do not translate {price}, it is template slug!
-#: app/PriorPrice/SettingsData.php:47
+#: app/PriorPrice/SettingsData.php:55
 #: app/PriorPrice/SettingsPage.php:291
 msgid "30-day low: {price}"
 msgstr ""
 
 #. translators: Do not translate {days}, it is template slug!
-#: app/PriorPrice/SettingsData.php:53
-#: app/PriorPrice/SettingsData.php:229
+#: app/PriorPrice/SettingsData.php:61
+#: app/PriorPrice/SettingsData.php:247
 #: app/PriorPrice/SettingsPage.php:361
 msgid "Price in the last {days} days is the same as current"
 msgstr ""
 
-#: app/PriorPrice/SettingsData.php:68
+#: app/PriorPrice/SettingsData.php:76
 #: app/PriorPrice/SettingsPage.php:417
 msgid "Select a variant to see the lowest price"
 msgstr ""
 
 #. translators: %s - the lowest price in the last 30 days.
-#: app/PriorPrice/SettingsData.php:179
+#: app/PriorPrice/SettingsData.php:197
 msgid "30-day low: %s"
 msgstr ""
 
@@ -492,190 +527,182 @@ msgstr ""
 msgid "Text to show next to the price before a variant is selected."
 msgstr ""
 
+#: app/PriorPrice/SettingsPage.php:429
+msgid "WooCommerce REST API"
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:440
+msgid "Expose lowest prior price in the WooCommerce REST API"
+msgstr ""
+
 #: app/PriorPrice/SettingsPage.php:444
+msgid "When enabled, product and variation responses include wc_price_history.lowest (float, tax-inclusive like the storefront)."
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:454
+msgid "Expose full price history in the WooCommerce REST API"
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:458
+msgid "When enabled, responses include wc_price_history.history: an object whose keys are Unix timestamps and values are prices (float). Anyone who can read products via the REST API will see this data—leave off unless you need it. Not the same as the Store API (wc/store)."
+msgstr ""
+
+#: app/PriorPrice/SettingsPage.php:479
 msgid "Danger zone"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:448
+#: app/PriorPrice/SettingsPage.php:483
 msgid "Use these actions with caution!"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:451
+#: app/PriorPrice/SettingsPage.php:486
 msgid "It is really recommended to make a backup of your database beforehand!"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:456
+#: app/PriorPrice/SettingsPage.php:491
 msgid "Fix history"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:466
+#: app/PriorPrice/SettingsPage.php:501
 msgid "Fix prices history"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:469
+#: app/PriorPrice/SettingsPage.php:504
 msgid "Ever happened that you discounted a product and the price history shows the lowest price before discount same as after discount? This action will perhaps fix it."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:474
+#: app/PriorPrice/SettingsPage.php:509
 msgid "Yes: \"perhaps\" does not sound definite, and for good reason: the reasons for the problem described above may vary, so I really recommend taking a backup."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:480
-#: app/PriorPrice/SettingsPage.php:490
+#: app/PriorPrice/SettingsPage.php:515
+#: app/PriorPrice/SettingsPage.php:525
 msgid "Clean history"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:493
+#: app/PriorPrice/SettingsPage.php:528
 msgid "This action cannot be undone (unless you have a backup). All price history data will be removed."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:507
-#: app/PriorPrice/SettingsPage.php:514
+#: app/PriorPrice/SettingsPage.php:542
+#: app/PriorPrice/SettingsPage.php:549
 msgid "WC Price History PRO"
 msgstr ""
 
 #. translators: %1$s: WC Price History PRO
-#: app/PriorPrice/SettingsPage.php:513
+#: app/PriorPrice/SettingsPage.php:548
 msgid "Upgrade to %1$s to review the full price history and edit past prices directly in your store."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:519
+#: app/PriorPrice/SettingsPage.php:554
 msgid "Pricing (per site, per year):"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:520
+#: app/PriorPrice/SettingsPage.php:555
 msgid "€49 — 1 license"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:521
+#: app/PriorPrice/SettingsPage.php:556
 msgid "€45 per license — 5 licenses"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:522
+#: app/PriorPrice/SettingsPage.php:557
 msgid "€40 per license — 20 licenses"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:529
+#: app/PriorPrice/SettingsPage.php:564
 msgid "Get PRO"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:533
+#: app/PriorPrice/SettingsPage.php:568
 msgid "Support"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:536
+#: app/PriorPrice/SettingsPage.php:571
 msgid "If you have any questions, please contact me at plugin support forum."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:542
+#: app/PriorPrice/SettingsPage.php:577
 msgid "Visit the official website of the plugin"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:546
+#: app/PriorPrice/SettingsPage.php:581
 msgid "Please rate the plugin! "
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:551
+#: app/PriorPrice/SettingsPage.php:586
 msgid "Read the EU legal acts:"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:553
+#: app/PriorPrice/SettingsPage.php:588
 msgid "Guidance on the Price Indication Directive (2021)"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:556
+#: app/PriorPrice/SettingsPage.php:591
 msgid "Status"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:563
+#: app/PriorPrice/SettingsPage.php:598
 msgid "Storage method:"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:567
-msgid "Database tables"
-msgstr ""
-
-#: app/PriorPrice/SettingsPage.php:571
-msgid "Post meta (legacy)"
-msgstr ""
-
-#: app/PriorPrice/SettingsPage.php:579
+#: app/PriorPrice/SettingsPage.php:614
 msgid "Great! The plugin is using dedicated database tables for storing price history. This provides better performance and scalability."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:585
+#: app/PriorPrice/SettingsPage.php:620
 msgid "Why tables are used:"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:588
-msgid "Migration from post meta has been completed."
-msgstr ""
-
-#: app/PriorPrice/SettingsPage.php:590
-msgid "Migration was not needed (e.g. fresh install with database tables)."
-msgstr ""
-
-#: app/PriorPrice/SettingsPage.php:592
-msgid "Migration status is not set."
-msgstr ""
-
-#: app/PriorPrice/SettingsPage.php:595
-msgid "Migration status is %s."
-msgstr ""
-
-#: app/PriorPrice/SettingsPage.php:602
+#: app/PriorPrice/SettingsPage.php:637
 msgid "Tables:"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:612
+#: app/PriorPrice/SettingsPage.php:647
 msgid "rows"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:614
+#: app/PriorPrice/SettingsPage.php:649
 msgid "table missing"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:621
-msgid "The plugin is using post meta for storing price history. Consider migrating to database tables for better performance."
-msgstr ""
-
-#: app/PriorPrice/SettingsPage.php:647
+#: app/PriorPrice/SettingsPage.php:682
 msgid "Force First Scan to Finish"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:655
+#: app/PriorPrice/SettingsPage.php:690
 msgid "Force finish scan"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:659
+#: app/PriorPrice/SettingsPage.php:694
 msgid "This action will force the first scan to finish. This is useful if the scan is stuck in the middle for a long time."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:668
+#: app/PriorPrice/SettingsPage.php:703
 msgid "Restart First Scan"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:678
+#: app/PriorPrice/SettingsPage.php:713
 msgid "Restart scan"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:682
+#: app/PriorPrice/SettingsPage.php:717
 msgid "This action will restart the first scan. This is useful if you see there are still some products without history."
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:701
+#: app/PriorPrice/SettingsPage.php:736
 msgid "Hire Me - Senior WooCommerce Engineer"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:708
+#: app/PriorPrice/SettingsPage.php:743
 msgid "Need WooCommerce Expertise?"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:714
+#: app/PriorPrice/SettingsPage.php:749
 msgid "Hire a Senior who delivers"
 msgstr ""
 
-#: app/PriorPrice/SettingsPage.php:721
+#: app/PriorPrice/SettingsPage.php:756
 msgid "I help WooCommerce stores sell more & break less"
 msgstr ""
 
