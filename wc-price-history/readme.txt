@@ -7,7 +7,7 @@ Tags: omnibus, WooCommerce, prices, history, lowest
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 3.2.4
+Stable tag: 3.2.5
 License: Expat
 License URI: https://mit-license.org/
 Donate link: https://buycoffee.to/wpzlecenia
@@ -131,6 +131,9 @@ Please submit the [GitHub issue](https://github.com/kkarpieszuk/wc-price-history
 Yes, I am available for hire. Please contact me at [LinkedIn](https://linkedin.com/in/konrad-karpieszuk-38528b11/).
 
 == Changelog ==
+
+= 3.2.5 =
+- Fix: When counting from sale start, an empty 30-day pre-sale window now uses the last known price before the window (carry-forward) instead of the global minimum from all older history. (#213)
 
 = 3.2.4 =
 - Enhancement: Optional WooCommerce REST API fields `wc_price_history.lowest` and `wc_price_history.history` (settings under WooCommerce → Price History, off by default). (#202)
