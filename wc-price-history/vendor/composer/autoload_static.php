@@ -7,7 +7,7 @@ namespace Composer\Autoload;
 class ComposerStaticInit1aaf2e6fcde6e74221da55ef6ccafc96
 {
     public static $prefixLengthsPsr4 = array (
-        'P' => 
+        'P' =>
         array (
             'PriorPrice\\' => 11,
             'PhpStanCustomRules\\' => 19,
@@ -15,11 +15,11 @@ class ComposerStaticInit1aaf2e6fcde6e74221da55ef6ccafc96
     );
 
     public static $prefixDirsPsr4 = array (
-        'PriorPrice\\' => 
+        'PriorPrice\\' =>
         array (
             0 => __DIR__ . '/../..' . '/app/PriorPrice',
         ),
-        'PhpStanCustomRules\\' => 
+        'PhpStanCustomRules\\' =>
         array (
             0 => __DIR__ . '/../..' . '/phpstan-custom-rules',
         ),
@@ -27,6 +27,31 @@ class ComposerStaticInit1aaf2e6fcde6e74221da55ef6ccafc96
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'PhpStanCustomRules\\RegisterHooksMethodInstantiationRule' => __DIR__ . '/../..' . '/phpstan-custom-rules/RegisterHooksMethodInstantiationRule.php',
+        'PriorPrice\\AdminAssets' => __DIR__ . '/../..' . '/app/PriorPrice/AdminAssets.php',
+        'PriorPrice\\Ajax' => __DIR__ . '/../..' . '/app/PriorPrice/Ajax.php',
+        'PriorPrice\\Database\\AdminNotice' => __DIR__ . '/../..' . '/app/PriorPrice/Database/AdminNotice.php',
+        'PriorPrice\\Database\\DbMigration' => __DIR__ . '/../..' . '/app/PriorPrice/Database/DbMigration.php',
+        'PriorPrice\\Database\\Install' => __DIR__ . '/../..' . '/app/PriorPrice/Database/Install.php',
+        'PriorPrice\\EducationalTab' => __DIR__ . '/../..' . '/app/PriorPrice/EducationalTab.php',
+        'PriorPrice\\Export' => __DIR__ . '/../..' . '/app/PriorPrice/Export.php',
+        'PriorPrice\\FirstScan' => __DIR__ . '/../..' . '/app/PriorPrice/FirstScan.php',
+        'PriorPrice\\FrontEndAssets' => __DIR__ . '/../..' . '/app/PriorPrice/FrontEndAssets.php',
+        'PriorPrice\\Helpers\\Pro' => __DIR__ . '/../..' . '/app/PriorPrice/Helpers/Pro.php',
+        'PriorPrice\\HistoryStorage' => __DIR__ . '/../..' . '/app/PriorPrice/HistoryStorage.php',
+        'PriorPrice\\HistoryStorageTable' => __DIR__ . '/../..' . '/app/PriorPrice/HistoryStorageTable.php',
+        'PriorPrice\\Hooks' => __DIR__ . '/../..' . '/app/PriorPrice/Hooks.php',
+        'PriorPrice\\Marketing' => __DIR__ . '/../..' . '/app/PriorPrice/Marketing.php',
+        'PriorPrice\\Migrations' => __DIR__ . '/../..' . '/app/PriorPrice/Migrations.php',
+        'PriorPrice\\Prices' => __DIR__ . '/../..' . '/app/PriorPrice/Prices.php',
+        'PriorPrice\\ProductDuplicate' => __DIR__ . '/../..' . '/app/PriorPrice/ProductDuplicate.php',
+        'PriorPrice\\ProductRestApi' => __DIR__ . '/../..' . '/app/PriorPrice/ProductRestApi.php',
+        'PriorPrice\\ProductUpdates' => __DIR__ . '/../..' . '/app/PriorPrice/ProductUpdates.php',
+        'PriorPrice\\SettingsData' => __DIR__ . '/../..' . '/app/PriorPrice/SettingsData.php',
+        'PriorPrice\\SettingsPage' => __DIR__ . '/../..' . '/app/PriorPrice/SettingsPage.php',
+        'PriorPrice\\Shortcode' => __DIR__ . '/../..' . '/app/PriorPrice/Shortcode.php',
+        'PriorPrice\\Taxes' => __DIR__ . '/../..' . '/app/PriorPrice/Taxes.php',
+        'PriorPrice\\Variations' => __DIR__ . '/../..' . '/app/PriorPrice/Variations.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
