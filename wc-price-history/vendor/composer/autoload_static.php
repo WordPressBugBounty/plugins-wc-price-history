@@ -47,6 +47,7 @@ class ComposerStaticInit1aaf2e6fcde6e74221da55ef6ccafc96
         'PriorPrice\\ProductDuplicate' => __DIR__ . '/../..' . '/app/PriorPrice/ProductDuplicate.php',
         'PriorPrice\\ProductRestApi' => __DIR__ . '/../..' . '/app/PriorPrice/ProductRestApi.php',
         'PriorPrice\\ProductUpdates' => __DIR__ . '/../..' . '/app/PriorPrice/ProductUpdates.php',
+        'PriorPrice\\SaleStartDate' => __DIR__ . '/../..' . '/app/PriorPrice/SaleStartDate.php',
         'PriorPrice\\SettingsData' => __DIR__ . '/../..' . '/app/PriorPrice/SettingsData.php',
         'PriorPrice\\SettingsPage' => __DIR__ . '/../..' . '/app/PriorPrice/SettingsPage.php',
         'PriorPrice\\Shortcode' => __DIR__ . '/../..' . '/app/PriorPrice/Shortcode.php',

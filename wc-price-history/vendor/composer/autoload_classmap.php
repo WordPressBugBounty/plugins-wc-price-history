@@ -27,6 +27,7 @@ return array(
     'PriorPrice\\ProductDuplicate' => $baseDir . '/app/PriorPrice/ProductDuplicate.php',
     'PriorPrice\\ProductRestApi' => $baseDir . '/app/PriorPrice/ProductRestApi.php',
     'PriorPrice\\ProductUpdates' => $baseDir . '/app/PriorPrice/ProductUpdates.php',
+    'PriorPrice\\SaleStartDate' => $baseDir . '/app/PriorPrice/SaleStartDate.php',
     'PriorPrice\\SettingsData' => $baseDir . '/app/PriorPrice/SettingsData.php',
     'PriorPrice\\SettingsPage' => $baseDir . '/app/PriorPrice/SettingsPage.php',
     'PriorPrice\\Shortcode' => $baseDir . '/app/PriorPrice/Shortcode.php',

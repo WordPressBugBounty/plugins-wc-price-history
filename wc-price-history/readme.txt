@@ -7,7 +7,7 @@ Tags: omnibus, WooCommerce, prices, history, lowest
 Requires at least: 5.8
 Tested up to: 7.1
 Requires PHP: 7.2
-Stable tag: 3.2.6
+Stable tag: 3.2.7
 License: Expat
 License URI: https://mit-license.org/
 Donate link: https://buycoffee.to/wpzlecenia
@@ -131,6 +131,9 @@ Please submit the [GitHub issue](https://github.com/kkarpieszuk/wc-price-history
 Yes, I am available for hire. Please contact me at [LinkedIn](https://linkedin.com/in/konrad-karpieszuk-38528b11/).
 
 == Changelog ==
+
+= 3.2.7 =
+- Fix: Variable products with sale dates on variations no longer show the promotional price as the Omnibus lowest on the parent, shop/category listings, or shortcode when counting from sale start. (#204, #125)
 
 = 3.2.6 =
 - Fix: When counting from sale start, an empty 30-day pre-sale window now uses the last known price before the window (carry-forward) instead of the global minimum from all older history. (#213)

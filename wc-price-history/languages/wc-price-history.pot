@@ -2,14 +2,14 @@
 # This file is distributed under the Expat.
 msgid ""
 msgstr ""
-"Project-Id-Version: WC Price History 3.2.6\n"
+"Project-Id-Version: WC Price History 3.2.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wc-price-history\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-19T09:43:03+00:00\n"
+"POT-Creation-Date: 2026-10-12T14:46:57+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: wc-price-history\n"
@@ -326,8 +326,8 @@ msgid "We will notify you when the scan is finished."
 msgstr ""
 
 #. translators: %d product id, %s link to product edit screen.
-#: app/PriorPrice/HistoryStorage.php:138
-#: app/PriorPrice/HistoryStorageTable.php:69
+#: app/PriorPrice/HistoryStorage.php:149
+#: app/PriorPrice/HistoryStorageTable.php:89
 #, php-format
 msgid "Product #%1$d is on sale but has no sale start date. Please edit this product and set starting date for sale: %2$s"
 msgstr ""
