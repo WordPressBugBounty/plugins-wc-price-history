@@ -7,7 +7,7 @@ Tags: omnibus, WooCommerce, prices, history, lowest
 Requires at least: 5.8
 Tested up to: 7.1
 Requires PHP: 7.2
-Stable tag: 3.2.7
+Stable tag: 3.2.8
 License: Expat
 License URI: https://mit-license.org/
 Donate link: https://buycoffee.to/wpzlecenia
@@ -131,6 +131,10 @@ Please submit the [GitHub issue](https://github.com/kkarpieszuk/wc-price-history
 Yes, I am available for hire. Please contact me at [LinkedIn](https://linkedin.com/in/konrad-karpieszuk-38528b11/).
 
 == Changelog ==
+
+= 3.2.8 =
+- Fix: Lowest price in the last N days (database tables and legacy storage) now includes the last known price before the window (carry-forward), so a recent price increase no longer hides the earlier lower price that was still in effect during most of the period. (#222)
+- Enhancement: Warn on the product edit screen (classic and WooCommerce block/React product editor, including SPA navigation) and products list when sale-start Omnibus counting is enabled but a product on sale has no scheduled sale start date — including variable products where only some on-sale variations lack a start date. (#130)
 
 = 3.2.7 =
 - Fix: Variable products with sale dates on variations no longer show the promotional price as the Omnibus lowest on the parent, shop/category listings, or shortcode when counting from sale start. (#204, #125)
